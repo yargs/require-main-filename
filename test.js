@@ -15,7 +15,9 @@ describe('require-main-filename', function () {
       filename: 'D:\\Program Files (x86)\\iisnode\\interceptor.js',
       children: [ {filename: 'D:\\home\\site\\wwwroot\\server.js'} ]
     }
-    requireMainFilename(main).should.match(/server\.js/)
+    requireMainFilename({
+      main: main
+    }).should.match(/server\.js/)
   })
 
   it('should not use children[0] if no children exist', function () {
@@ -23,6 +25,12 @@ describe('require-main-filename', function () {
       filename: 'D:\\Program Files (x86)\\iisnode\\interceptor.js',
       children: []
     }
-    requireMainFilename(main).should.match(/interceptor\.js/)
+    requireMainFilename({
+      main: main
+    }).should.match(/interceptor\.js/)
+  })
+
+  it('should default to process.cwd() if require.main is undefined', function () {
+    requireMainFilename({}).should.match(/require-main-filename/)
   })
 })

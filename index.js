@@ -1,7 +1,8 @@
-module.exports = function (main) {
-  main = main || require.main
-  if (isIISNode(main)) return handleIISNode(main)
-  else return main.filename
+module.exports = function (_require) {
+  _require = _require || require
+  var main = _require.main
+  if (main && isIISNode(main)) return handleIISNode(main)
+  else return main ? main.filename : process.cwd()
 }
 
 function isIISNode (main) {

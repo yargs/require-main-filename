@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "pretest": "standard",
-    "test": "tap --coverage test.js"
+    "test": "tap --coverage test.js",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,9 @@
     "shim",
     "iisnode"
   ],
-  "files": ["index.js"],
+  "files": [
+    "index.js"
+  ],
   "author": "Ben Coe <ben@npmjs.com>",
   "license": "ISC",
   "bugs": {
@@ -26,6 +29,7 @@
   "devDependencies": {
     "chai": "^4.0.0",
     "standard": "^8.6.0",
+    "standard-version": "^4.0.0",
     "tap": "^10.0.0"
   }
 }

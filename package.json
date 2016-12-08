@@ -24,7 +24,7 @@
   "homepage": "https://github.com/yargs/require-main-filename#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "standard": "^6.0.5",
-    "tap": "^5.2.0"
+    "standard": "^8.6.0",
+    "tap": "^8.0.1"
   }
 }

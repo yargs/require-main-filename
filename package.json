@@ -1,6 +1,6 @@
 {
   "name": "require-main-filename",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "shim for require.main.filename() that works in as many environments as possible",
   "main": "index.js",
   "scripts": {

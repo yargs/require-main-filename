@@ -26,6 +26,6 @@
   "devDependencies": {
     "chai": "^4.0.0",
     "standard": "^8.6.0",
-    "tap": "^10.0.0"
+    "tap": "10.3.3"
   }
 }
